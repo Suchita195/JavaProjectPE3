@@ -10,14 +10,12 @@ public class FirstAndLastDayOfWeekTest {
     FirstAndLastDayOfWeek check;
     @Before
     public void setUp(){
-        System.out.println("Before run");
         check=new FirstAndLastDayOfWeek();
     }
 
     @After
     public void tearDown()
     {
-        System.out.println("After tear");
         check=null;
     }
 

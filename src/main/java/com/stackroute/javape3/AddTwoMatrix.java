@@ -7,14 +7,14 @@ public class AddTwoMatrix {
     {
         int sum[][]=new int[row][column];
         String result="";
-        for(int i = 0; i < row; i++) {
-            for (int j = 0; j < column; j++) {
-                sum[i][j] = first[i][j] + second[i][j];
+        for(int index = 0; index < row; index++) {
+            for (int inner_index = 0; inner_index < column; inner_index++) {
+                sum[index][inner_index] = first[index][inner_index] + second[index][inner_index];//calculating the sum of both the matrix
             }
         }
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < column; j++) {
-                result =result+ sum[i][j]+" ";
+        for (int index = 0; index < row; index++) {
+            for (int inner_index = 0; inner_index < column; inner_index++) {
+                result =result+ sum[index][inner_index]+" ";
             }
             result=result+"\n";
         }

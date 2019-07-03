@@ -1,30 +1,30 @@
 package com.stackroute.javape3;
 
 public class CheckConsecutiveNumbers {
-    boolean areConsecutive(int []array,int n)
+    boolean areConsecutive(int []array,int no_of_elements)
     {
         int min=0,max=0;
-        for(int i=0;i<array.length;i++)
+        for(int index=0;index<array.length;index++)
         {
             min=array[0];
-            if (array[i] < min) {
-                min = array[i];
+            if (array[index] < min) {
+                min = array[index];
             }
         }
 
-        for(int i=0;i<array.length;i++)
+        for(int index=0;index<array.length;index++)
         {
             max=array[0];
-            if(array[i] > max)
+            if(array[index] > max)
             {
-                max=array[i];
+                max=array[index];
             }
         }
-        if (max - min + 1 == n)
+        if (max - min + 1 == no_of_elements)
         {
-            boolean visited[] = new boolean[n];
+            boolean visited[] = new boolean[no_of_elements];
             int i;
-            for (i = 0; i < n; i++)
+            for (i = 0; i < no_of_elements; i++)
             {
                 /* If we see an element again, then return false */
                 if (visited[array[i] - min] != false)
@@ -37,6 +37,6 @@ public class CheckConsecutiveNumbers {
             /* If all elements occur once, then return true */
             return true;
         }
-        return false; // if (max - min  + 1 != n)
+        return false; // if (max - min  + 1 != no_of_elements)
     }
 }
